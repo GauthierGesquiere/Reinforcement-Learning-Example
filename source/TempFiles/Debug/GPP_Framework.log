@@ -1,0 +1,10 @@
+﻿  main.cpp
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\MachineLearning\QBot.h(33,24): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\MachineLearning\QZombie.h(34,24): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+  App_MachineLearning.cpp
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\MachineLearning\QBot.h(33,24): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\MachineLearning\QZombie.h(34,24): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\MachineLearning\App_MachineLearning.cpp(19,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+  GPP_Framework.vcxproj -> C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\bin\Debug\GPP_Framework.exe
+  0 File(s) copied
