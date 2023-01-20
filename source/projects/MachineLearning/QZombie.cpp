@@ -44,6 +44,7 @@ QZombie::QZombie(float x,
 		m_ActionMatrixMemoryArr[i].Resize(1, m_NrOfOutputs);
 	}
 	m_BotBrain.Randomize(-1.0f, 2.0f);
+	//m_BotBrain.SetAll(0.0f);
 	if (m_UseBias) {
 		m_BotBrain.SetRowAll(m_NrOfInputs, -10.0f);
 	}
@@ -142,7 +143,7 @@ void QZombie::Update(vector<QBot*>& botList, float deltaTime)
 	Elite::Vector2 newDir(cos(m_Angle), sin(m_Angle));
 	m_Location += newDir * m_Speed * deltaTime;
 
-	m_Health -= 0.1f;
+	//m_Health -= 0.01f;
 	if (m_Health < 0)
 	{
 		m_Alive = false;

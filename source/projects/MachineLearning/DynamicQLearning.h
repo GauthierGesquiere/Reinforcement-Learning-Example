@@ -22,7 +22,7 @@ public:
 	DynamicQLearning(int nrOfFood, int memorySize, int nrOfInputs, int nrOfOutputs, bool bias );
 	~DynamicQLearning();
 
-	void Update(float deltaTime);
+	void Update(float deltaTime, bool render);
 	void Render(float deltaTime);
 
 	void SaveBeginData(string s) const;
@@ -43,7 +43,7 @@ private:
 	int m_NotReached600 = 0;
 
 	const int m_NrOfBots = 50;
-	const int m_NrOfZombies = 0;
+	const int m_NrOfZombies = 10;
 	const int m_NrOfFood;
 	bool m_AssignLastBotAlive = true;
 	bool m_SaveAtEnd;

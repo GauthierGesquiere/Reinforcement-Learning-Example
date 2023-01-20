@@ -33,7 +33,9 @@ public:
 	int GetFoodEaten() { return m_BotEaten; }
 	int GetAge() { return m_Age; }
 	Vector2 GetLocation() { return m_Location; }
+	Vector2 GetForward() { return Vector2(cos(m_Angle), sin(m_Angle)); }
 
+	bool m_Seen = false;
 
 	bool IsAlive();
 	void ResetBot();

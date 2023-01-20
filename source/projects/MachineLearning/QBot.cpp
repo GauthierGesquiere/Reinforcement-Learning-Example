@@ -25,12 +25,12 @@ QBot::QBot(float x,
 	m_UseBias(useBias),
 	m_BotBrain(nrInputs + (useBias ? 1 : 0), nrOutputs),
 	m_DeltaBotBrain(nrInputs + (useBias ? 1 : 0), nrOutputs),
-	m_SAngle(1, nrOutputs),
+	m_SAngle(1, 5),
 	m_Index(index)
 {
 	float start = -m_SFOV / 2;
-	float step = m_SFOV / (nrOutputs - 1);
-	for (int i = 0; i < nrOutputs; ++i)
+	float step = m_SFOV / (5 - 1);
+	for (int i = 0; i < 5; ++i)
 	{
 		float value = start + i * step;
 		m_SAngle.Set(0, i, value);
@@ -75,12 +75,16 @@ void QBot::Update(vector<Food*>& foodList, vector<QZombie*>& zombieList, float d
 	m_VisibleZombie.clear();
 
 	Elite::Vector2 dir(cos(m_Angle), sin(m_Angle));
-	float angleStep = m_FOV / (m_NrOfInputs);
+	float angleStep = m_FOV / 16;//(m_NrOfInputs);
 
+	//float currentDist = m_StateMatrixMemoryArr[currentIndex].Get(0, 0);
+	//std::cout << currentDist << std::endl;
 	m_StateMatrixMemoryArr[currentIndex].SetAll(0.0);
+	//m_StateMatrixMemoryArr[currentIndex].Set(0, 0, currentDist);
 
 	bool cameClose = false;
 	int checkIfIsTooFar = 0;
+
 	for (Food* food : foodList) 
 	{
 		Vector2 foodLoc = food->GetLocation();
@@ -108,20 +112,35 @@ void QBot::Update(vector<Food*>& foodList, vector<QZombie*>& zombieList, float d
 			m_Visible.push_back(food);
 
 			int index = (int)((angle + m_FOV / 2) / angleStep);
+			//std::cout << index << std::endl;
 			float invDist = CalculateInverseDistance(dist);
 			float currentDist = m_StateMatrixMemoryArr[currentIndex].Get(0, index);
 			if (invDist > currentDist) 
 			{
 				m_StateMatrixMemoryArr[currentIndex].Set(0, index, invDist);
 			}
+
 		}
 		else if (dist < 10.0f) 
 		{
+			/*if (!m_MemoryOfFoodLocations.empty())
+			{
+				m_MemoryOfFoodLocations.pop();
+			}*/
+			//m_MemoryOfFoodLocations.push_back(food);
+
+			//float invDist = CalculateInverseDistance(dist);
+			//m_StateMatrixMemoryArr[currentIndex].Set(0, 0, invDist);
 			cameClose = true;
 		}
 
 		if (dist < 2.0f) 
 		{
+			/*if (!m_MemoryOfFoodLocations.empty())
+			{
+				m_MemoryOfFoodLocations.pop();
+			}*/
+
 			food->Eat();
 			m_CameCloseFood = 50;
 			m_FoodEaten++;
@@ -130,6 +149,9 @@ void QBot::Update(vector<Food*>& foodList, vector<QZombie*>& zombieList, float d
 			//m_BotBrain.Print();
 		}
 	}
+
+	//float currentDis1t = m_StateMatrixMemoryArr[currentIndex].Get(0, 0);
+	//std::cout << currentDis1t << std::endl;
 
 	if (m_CameCloseFood > 0)
 	{
@@ -150,10 +172,10 @@ void QBot::Update(vector<Food*>& foodList, vector<QZombie*>& zombieList, float d
 	}
 	else
 	{
-		Reinforcement(m_PositiveQOutRadius * m_Location.Magnitude(), m_MemorySize);
+		Reinforcement(m_NegativeQOutRadius * m_Location.Magnitude(), m_MemorySize);
 	}
 
-	/*cameClose = false;
+	cameClose = false;
 	for (QZombie* zombie : zombieList)
 	{
 		if (!zombie->IsAlive())
@@ -162,36 +184,60 @@ void QBot::Update(vector<Food*>& foodList, vector<QZombie*>& zombieList, float d
 		}
 		
 		Vector2 zombieLoc = zombie->GetLocation();
-		Vector2 zombieVector = zombieLoc - (m_Location - dir * 10);
+		Vector2 zombieVector = zombieLoc - (m_Location/* - dir * 10*/);
 		float dist = (zombieLoc - m_Location).Magnitude();
 		
 		if (dist > m_MaxDistance)
 		{
 			continue;
 		}
+		//else
+		//{
+		//	zombie->m_Seen = false;
+		//}
 		
 		zombieVector *= 1 / dist;
 
 		float angle = AngleBetween(dir, zombieVector);
-		if (angle > -m_FOV / 2 && angle < m_FOV / 2)
+		if (angle > -m_FOV && angle < m_FOV)
 		{
 			m_VisibleZombie.push_back(zombie);
 
-			int index = (int)((angle + m_FOV / 2) / angleStep);
+			int index = (int)((angle + m_FOV) / angleStep);
+			//std::cout << index << std::endl;
 			float invDist = CalculateInverseDistance(dist);
-			float currentDist = m_StateMatrixMemoryArr[currentIndex].Get(0, index);
+			float currentDist = m_StateMatrixMemoryArr[currentIndex].Get(0, index + 16);
 			if (invDist > currentDist)
 			{
-				m_StateMatrixMemoryArr[currentIndex].Set(0, index, invDist);
+				m_StateMatrixMemoryArr[currentIndex].Set(0, index + 16, invDist);
 			}
+
+			/*if (Dot(dir.GetNormalized(), zombie->GetForward().GetNormalized()) < 0)
+			{*/
+			if (!zombie->m_Seen)
+			{
+				Reinforcement(m_NegativeQZombieComingAtYou, m_MemorySize);
+				zombie->m_Seen = true;
+				//std::cout << "comes" << std::endl;
+				//std::cout << zombie->GetIndex() << std::endl;
+			}
+			//}
 		}
-		else if (dist < 10.0f)
+		else if (dist < 25.0f)
 		{
 			cameClose = true;
+			Reinforcement(m_PositiveQZombieClose, m_MemorySize);
+			zombie->m_Seen = false;
 		}
-		if (dist < 6.0f) {
-			m_CameCloseZombie = 150;
-			Reinforcement(m_NegativeQZombieClose, m_MemorySize);
+		else
+		{
+			Reinforcement(m_PositiveQZombieClose, m_MemorySize);
+			zombie->m_Seen = false;
+		}
+		if (dist < 20.0f) {
+			m_StartTimer = true;
+			//std::cout << "start" << std::endl;
+			//Reinforcement(m_NegativeQZombieClose, m_MemorySize);
 		}
 	}
 
@@ -200,11 +246,23 @@ void QBot::Update(vector<Food*>& foodList, vector<QZombie*>& zombieList, float d
 		m_CameCloseZombie--;
 	}
 
-	if (cameClose && m_CameCloseZombie == 0)
+	if (m_StartTimer)
 	{
-		Reinforcement(m_PositiveQZombieClose, m_MemorySize);
-		m_CameCloseZombie = 150;
-	}*/
+		m_ElapsedSec -= deltaTime;
+	}
+	else
+	{
+		m_ElapsedSec = 2;
+	}
+
+	if (cameClose && m_ElapsedSec <= 0)
+	{
+		//Reinforcement(m_PositiveQZombieClose, m_MemorySize);
+		//std::cout << "reward" << std::endl;
+		m_StartTimer = false;
+	}
+
+	//Reinforcement(m_Age * 0.01f, m_MemorySize);
 
 	m_StateMatrixMemoryArr[currentIndex].Set(0, m_NrOfInputs, 1); //bias
 	m_StateMatrixMemoryArr[currentIndex].MatrixMultiply(m_BotBrain, m_ActionMatrixMemoryArr[currentIndex]);
@@ -212,9 +270,17 @@ void QBot::Update(vector<Food*>& foodList, vector<QZombie*>& zombieList, float d
 
 	int r, c;
 	m_ActionMatrixMemoryArr[currentIndex].Max(r, c);
+	//std::cout << c << std::endl;
 
 	float dAngle = m_SAngle.Get(0, c);
 	m_Angle += dAngle * deltaTime;
+
+	m_Speed = 30;
+	if (m_ActionMatrixMemoryArr[currentIndex].Get(0, m_NrOfOutputs) == 1)
+	{
+		m_Speed = 40;
+	}
+	//std::cout << "30" << std::endl;
 
 	Elite::Vector2 newDir(cos(m_Angle), sin(m_Angle));
 	m_Location += newDir * m_Speed * deltaTime;
@@ -236,6 +302,8 @@ void QBot::Render(bool vision, bool details)
 	Elite::Vector2 dir(cos(m_Angle), sin(m_Angle));
 	Elite::Vector2 leftVision(cos(m_Angle + m_FOV / 2), sin(m_Angle + m_FOV / 2));
 	Elite::Vector2 rightVision(cos(m_Angle - m_FOV / 2), sin(m_Angle - m_FOV / 2));
+	Elite::Vector2 leftVisionEnemies(cos(m_Angle + m_FOV), sin(m_Angle + m_FOV));
+	Elite::Vector2 rightVisionEnemies(cos(m_Angle - m_FOV), sin(m_Angle - m_FOV));
 
 	Elite::Vector2 perpDir(-dir.y, dir.x);
 
@@ -252,6 +320,9 @@ void QBot::Render(bool vision, bool details)
 		{
 			DEBUGRENDERER2D->DrawSegment(m_Location - 10 * dir, m_Location + m_MaxDistance * leftVision, c);
 			DEBUGRENDERER2D->DrawSegment(m_Location - 10 * dir, m_Location + m_MaxDistance * rightVision, c);
+
+			//DEBUGRENDERER2D->DrawSegment(m_Location - 10 * dir, m_Location + m_MaxDistance * leftVisionEnemies, c);
+			//DEBUGRENDERER2D->DrawSegment(m_Location - 10 * dir, m_Location + m_MaxDistance * rightVisionEnemies, c);
 
 			//increase scale of food when is visible
 			for (Food* f : m_Visible)
@@ -297,6 +368,8 @@ FMatrix* QBot::GetBrain()
 void QBot::SetBrain(FMatrix &matrix)
 {
 	//matrix->Print();
+	//m_BotBrain.SetAll(0);
+	//m_BotBrain.Add(matrix);
 	m_BotBrain.Copy(matrix);
 	//m_BotBrain.SetAll(0);
 	//matrix->Print();
@@ -307,7 +380,7 @@ void QBot::SetBrain(FMatrix &matrix)
 void QBot::Dead(bool zombie)
 {
 	m_Alive = false;
-	if (zombie)
+	if (!zombie)
 	{
 		Reinforcement(m_NegativeQ, m_MemorySize);	
 	}

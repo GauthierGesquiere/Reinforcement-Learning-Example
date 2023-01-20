@@ -1,8 +1,11 @@
-﻿  App_PathfindingAStar.cpp
+﻿  QZombie.cpp
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\MachineLearning\QBot.h(33,24): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\MachineLearning\QZombie.h(34,24): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\MachineLearning\QZombie.cpp(274,20): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
   Generating code
-  0 of 2973 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+  3 of 4630 functions (<0.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+    8 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  GPP_Framework.vcxproj -> C:\Users\Gautjekski\OneDrive - Hogeschool West-Vlaanderen\DAE\Gameplay Programming\Week 5\Gauthier_Gesquiere_GD06\bin\Release\GPP_Framework.exe
+  GPP_Framework.vcxproj -> C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\bin\Release\GPP_Framework.exe
   0 File(s) copied

@@ -30,6 +30,7 @@ private:
 	App_MachineLearning(const App_MachineLearning&) = delete;
 	App_MachineLearning& operator=(const App_MachineLearning&) = delete;
 
+	bool m_FirstIteration = false;
 	bool m_FastForward = false;
 };
 #endif

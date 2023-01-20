@@ -44,7 +44,7 @@ public:
 private:
 	//Custom params
 	int m_Index;
-
+	std::vector<Food*> m_MemoryOfFoodLocations;
 
 	Elite::Vector2 m_Location;
 	Elite::Vector2 m_StartLocation;
@@ -87,14 +87,17 @@ private:
 	float m_NegativeQ{ -1.f };
 	float m_NegativeQZombie{ -0.4f };
 	float m_NegativeQZombieClose{ -0.2f };
+	float m_NegativeQZombieComingAtYou{ -0.1f };
 	float m_NegativeQClose{ -0.8f };
 	float m_PositiveQ{ 1.2f };
-	float m_PositiveQZombieClose{ 0.2f };
-	float m_PositiveQInRadius{ 0.01f };
-	float m_PositiveQOutRadius{ 1.5f };
+	float m_PositiveQZombieClose{ 0.4f };
+	//float m_PositiveQInRadius{ 0.01f };
+	float m_NegativeQOutRadius{ 1.5 };
 	int m_CameCloseFood{ 0 };
 	int m_CameCloseZombie{ 0 };
 
+	float m_ElapsedSec = 0.0f;
+	bool m_StartTimer = false;
 };
 
 #endif

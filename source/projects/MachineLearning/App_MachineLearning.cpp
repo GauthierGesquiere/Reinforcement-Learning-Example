@@ -23,28 +23,29 @@ void App_MachineLearning::Start()
 	DEBUGRENDERER2D->GetActiveCamera()->SetZoom(75.0f);
 	DEBUGRENDERER2D->GetActiveCamera()->SetCenter(Elite::Vector2(50,50));
 
-	m_pDynamicQEnv = new DynamicQLearning(200, 100, 16, 5, true);
+	m_pDynamicQEnv = new DynamicQLearning(200, 100, 48, 6, true);
 }
 
 void App_MachineLearning::Update(float deltaTime)
 {
 	if (m_FastForward)
 	{
-		for (size_t i = 0; i < 10000; i++)
+		for (size_t i = 0; i < 600000; i++)
 		{
-			m_pDynamicQEnv->Update(deltaTime * Elite::randomFloat(0.9f, 1.1f));
-			PHYSICSWORLD->Simulate(deltaTime);
+			m_pDynamicQEnv->Update(0.01f, !m_FastForward);
 		}
 
-		m_pDynamicQEnv->Update(deltaTime * Elite::randomFloat(0.9f, 1.1f));
-
 		m_FastForward = false;
-
+		m_FirstIteration = true;
+	}
+	else if (m_FirstIteration)
+	{
+		m_pDynamicQEnv->Update(0.01f, !m_FastForward);
+		m_FirstIteration = false;
 	}
 	else
 	{
-		//m_pDynamicQEnv->Update(deltaTime);
-		m_pDynamicQEnv->Update(deltaTime);
+		m_pDynamicQEnv->Update(deltaTime, !m_FastForward);
 	}
 
 }

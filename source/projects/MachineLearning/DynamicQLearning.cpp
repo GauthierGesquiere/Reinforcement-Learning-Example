@@ -60,11 +60,11 @@ DynamicQLearning::DynamicQLearning(int nrOfFood, int memorySize, int nrOfInputs,
 	//create zombie bots
 	for (int i = 0; i < m_NrOfZombies; ++i)
 	{
-		float startx = Elite::randomFloat(-50.0f, 0.0f);
-		float starty = Elite::randomFloat(-50.0f, 50.0f);
+		float startx = Elite::randomFloat(-200.0f, 200.0f);
+		float starty = Elite::randomFloat(-200.0f, 200.0f);
 		float startAngle = Elite::randomFloat(0, float(M_PI) * 2);
 
-		QZombie* bot = new QZombie(startx, starty, float(M_PI) / 3, 2 * float(M_PI), startAngle, 50, m_NrOfInputs, m_NrOfOutputs, m_UseBias, 0);
+		QZombie* bot = new QZombie(startx, starty, float(M_PI) / 3, 2 * float(M_PI), startAngle, 50, 16, m_NrOfOutputs, m_UseBias, i);
 		m_Zombies.push_back(bot);
 	}
 
@@ -106,7 +106,7 @@ DynamicQLearning::~DynamicQLearning()
 		SAFE_DELETE(pFood);
 	}
 }
-void DynamicQLearning::Update(float deltaTime) 
+void DynamicQLearning::Update(float deltaTime, bool render) 
 {
 	m_ElapsedSec += deltaTime;
 	//Make var to check how many bots are still alive
@@ -282,6 +282,7 @@ void DynamicQLearning::Update(float deltaTime)
 	}
 
 	//UI
+	if (render)
 	{
 		//Setup
 		int const menuWidth = 235;
