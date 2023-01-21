@@ -28,7 +28,7 @@ void App_MachineLearning::Start()
 
 void App_MachineLearning::Update(float deltaTime)
 {
-	if (m_FastForward)
+	/*if (m_FastForward)
 	{
 		for (size_t i = 0; i < 600000; i++)
 		{
@@ -44,18 +44,18 @@ void App_MachineLearning::Update(float deltaTime)
 		m_FirstIteration = false;
 	}
 	else
-	{
+	{*/
 		m_pDynamicQEnv->Update(deltaTime, !m_FastForward);
-	}
+	//}
 
 }
 
 void App_MachineLearning::Render(float deltaTime) const
 {
-	if (!m_FastForward)
-	{
+	/*if (!m_FastForward)
+	{*/
 		m_pDynamicQEnv->Render(deltaTime);
-	}
+	//}
 }
 
 

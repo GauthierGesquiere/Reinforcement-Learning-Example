@@ -112,6 +112,8 @@ int main(int argc, char* argv[])
 		//Boot application
 		myApp->Start();
 
+		int frames = 2000000;
+
 		//Application Loop
 		while (!pWindow->ShutdownRequested())
 		{
@@ -119,24 +121,33 @@ int main(int argc, char* argv[])
 			TIMER->Update();
 			auto const elapsed = TIMER->GetElapsed();
 
-			//Window procedure first, to capture all events and input received by the window
-			if (!pImmediateUI->FocussedOnUI())
-				pWindow->ProcedureEWindow();
-			else
-				pImmediateUI->EventProcessing();
+			if (frames <= 0)
+			{
+				//Window procedure first, to capture all events and input received by the window
+				if (!pImmediateUI->FocussedOnUI())
+					pWindow->ProcedureEWindow();
+				else
+					pImmediateUI->EventProcessing();
 
-			//New frame Immediate UI (Flush)
-			pImmediateUI->NewFrame(pWindow->GetRawWindowHandle(), elapsed);
+				//New frame Immediate UI (Flush)
+				pImmediateUI->NewFrame(pWindow->GetRawWindowHandle(), elapsed);
+			}
 
 			//Update (Physics, App)
-			PHYSICSWORLD->Simulate(elapsed);
+			PHYSICSWORLD->Simulate(0.01f);
 			pCamera->Update();
-			myApp->Update(elapsed);
+			myApp->Update(0.01f);
 
-			//Render and Present Frame
-			PHYSICSWORLD->RenderDebug();
-			myApp->Render(elapsed);
-			pFrame->SubmitAndFlipFrame(pImmediateUI);
+			if (frames <= 0)
+			{
+				//Render and Present Frame
+				PHYSICSWORLD->RenderDebug();
+				myApp->Render(elapsed);
+				pFrame->SubmitAndFlipFrame(pImmediateUI);
+			}
+
+			frames--;
+			//std::cout << frames << std::endl;
 		}
 
 		//Reversed Deletion

@@ -156,6 +156,8 @@ void DynamicQLearning::Update(float deltaTime, bool render)
 		}
 	}
 
+	m_CurrentBotsAlive = counter;
+
 	//switch to another bot when current bot dies
 	for (QBot* pBot : m_Bots)
 	{
@@ -284,96 +286,98 @@ void DynamicQLearning::Update(float deltaTime, bool render)
 	//UI
 	if (render)
 	{
-		//Setup
-		int const menuWidth = 235;
-		int const width = DEBUGRENDERER2D->GetActiveCamera()->GetWidth();
-		int const height = DEBUGRENDERER2D->GetActiveCamera()->GetHeight();
-		bool windowActive = true;
-		ImGui::SetNextWindowPos(ImVec2((float)width - menuWidth - 10, 10));
-		ImGui::SetNextWindowSize(ImVec2((float)menuWidth, (float)height - 20));
-		ImGui::Begin("Params", &windowActive, ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize);
-		ImGui::Checkbox("Save At End", &m_SaveAtEnd);
-		string s = "Alive: " + std::to_string(counter);
-		ImGui::Text(s.c_str());
-		s = "Generation: " + std::to_string(m_GenCount);
-		ImGui::Text(s.c_str());
-		s = "Memory Size: " + std::to_string(MEMORY_SIZE);
-		ImGui::Text(s.c_str());
-
-		s = "Learning Curve: " + std::to_string(m_LearningCurve);
-		ImGui::Text(s.c_str());
-
-		////if there are no bots alive
-		//if (counter <= 0)
-		//{
-		//	return;
-		//}
-
-		ImGui::Text("BOTS");
-		ImGui::Indent();
-		if (ImGui::Button("Next"))
-		{
-			while(true)
-			{
-				m_CameraIndex++;
-				if (m_CameraIndex >= m_NrOfBots)
-				{
-					m_CameraIndex = 0;
-				}
-				if (m_Bots[m_CameraIndex]->IsAlive())
-				{
-					break;
-				}
-			}
-		}
-		ImGui::SameLine();
-		if (ImGui::Button("Previous"))
-		{
-			while (true)
-			{
-				m_CameraIndex--;
-				if (m_CameraIndex < 0)
-				{
-					m_CameraIndex = m_NrOfBots - 1;
-				}
-				if (m_Bots[m_CameraIndex]->IsAlive())
-				{
-					break;
-				}
-			}
-		}
-
-		ImGui::Checkbox("Render Details", &m_RenderDetails);
-		ImGui::Checkbox("Render Vision", &m_RenderVision);
-		ImGui::Spacing();
-		ImGui::Checkbox("Only Render One Bot", &m_RenderOneBot);
-
-
-		m_EndGeneration = ImGui::Button("End Generation");
-
-		ImGui::Unindent();
-		ImGui::Spacing();
-		ImGui::Text("Best Gen: "); ImGui::SameLine();  ImGui::Text(std::to_string(m_BestGen).c_str());
-		ImGui::Text("Most Food Eaten: "); ImGui::SameLine();  ImGui::Text(std::to_string(m_MostFoodEaten).c_str());
-		ImGui::Text("Most Bots alive: "); ImGui::SameLine();  ImGui::Text(std::to_string(m_BotsAlive).c_str());
-		ImGui::Text("Time Survived "); ImGui::SameLine();  ImGui::Text(std::to_string(m_BestTimeAlive).c_str());
-
-		ImGui::Spacing();
-		ImGui::Spacing();
-		ImGui::Spacing();
-		ImGui::Text("Times reached 600sec: "); ImGui::SameLine();  ImGui::Text(std::to_string(m_Reached600).c_str());
-		ImGui::Text("Times not reached 600sec:"); ImGui::SameLine();  ImGui::Text(std::to_string(m_NotReached600).c_str());
 		
-
-		DEBUGRENDERER2D->GetActiveCamera()->SetCenter(m_Bots[m_CameraIndex]->GetLocation());
-
-		ImGui::End();
 	}
 
 }
 
 void DynamicQLearning::Render(float deltaTime)
 {
+	//Setup
+	int const menuWidth = 235;
+	int const width = DEBUGRENDERER2D->GetActiveCamera()->GetWidth();
+	int const height = DEBUGRENDERER2D->GetActiveCamera()->GetHeight();
+	bool windowActive = true;
+	ImGui::SetNextWindowPos(ImVec2((float)width - menuWidth - 10, 10));
+	ImGui::SetNextWindowSize(ImVec2((float)menuWidth, (float)height - 20));
+	ImGui::Begin("Params", &windowActive, ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize);
+	ImGui::Checkbox("Save At End", &m_SaveAtEnd);
+	string s = "Alive: " + std::to_string(m_CurrentBotsAlive);
+	ImGui::Text(s.c_str());
+	s = "Generation: " + std::to_string(m_GenCount);
+	ImGui::Text(s.c_str());
+	s = "Memory Size: " + std::to_string(MEMORY_SIZE);
+	ImGui::Text(s.c_str());
+
+	s = "Learning Curve: " + std::to_string(m_LearningCurve);
+	ImGui::Text(s.c_str());
+
+	////if there are no bots alive
+	//if (counter <= 0)
+	//{
+	//	return;
+	//}
+
+	ImGui::Text("BOTS");
+	ImGui::Indent();
+	if (ImGui::Button("Next"))
+	{
+		while (true)
+		{
+			m_CameraIndex++;
+			if (m_CameraIndex >= m_NrOfBots)
+			{
+				m_CameraIndex = 0;
+			}
+			if (m_Bots[m_CameraIndex]->IsAlive())
+			{
+				break;
+			}
+		}
+	}
+	ImGui::SameLine();
+	if (ImGui::Button("Previous"))
+	{
+		while (true)
+		{
+			m_CameraIndex--;
+			if (m_CameraIndex < 0)
+			{
+				m_CameraIndex = m_NrOfBots - 1;
+			}
+			if (m_Bots[m_CameraIndex]->IsAlive())
+			{
+				break;
+			}
+		}
+	}
+
+	ImGui::Checkbox("Render Details", &m_RenderDetails);
+	ImGui::Checkbox("Render Vision", &m_RenderVision);
+	ImGui::Spacing();
+	ImGui::Checkbox("Only Render One Bot", &m_RenderOneBot);
+
+
+	m_EndGeneration = ImGui::Button("End Generation");
+
+	ImGui::Unindent();
+	ImGui::Spacing();
+	ImGui::Text("Best Gen: "); ImGui::SameLine();  ImGui::Text(std::to_string(m_BestGen).c_str());
+	ImGui::Text("Most Food Eaten: "); ImGui::SameLine();  ImGui::Text(std::to_string(m_MostFoodEaten).c_str());
+	ImGui::Text("Most Bots alive: "); ImGui::SameLine();  ImGui::Text(std::to_string(m_BotsAlive).c_str());
+	ImGui::Text("Time Survived "); ImGui::SameLine();  ImGui::Text(std::to_string(m_BestTimeAlive).c_str());
+
+	ImGui::Spacing();
+	ImGui::Spacing();
+	ImGui::Spacing();
+	ImGui::Text("Times reached 600sec: "); ImGui::SameLine();  ImGui::Text(std::to_string(m_Reached600).c_str());
+	ImGui::Text("Times not reached 600sec:"); ImGui::SameLine();  ImGui::Text(std::to_string(m_NotReached600).c_str());
+
+
+	DEBUGRENDERER2D->GetActiveCamera()->SetCenter(m_Bots[m_CameraIndex]->GetLocation());
+
+	ImGui::End();
+
 	for (QBot* pBot : m_Bots)
 	{
 		if (m_RenderOneBot)
@@ -453,7 +457,7 @@ void DynamicQLearning::SaveEndGenData(string s, QBot* bot) const
 
 void DynamicQLearning::ResetEnvironment()
 {
-	std::cout << m_ElapsedSec << std::endl;
+	//std::cout << m_ElapsedSec << std::endl;
 
 
 	//Reset Whole environment

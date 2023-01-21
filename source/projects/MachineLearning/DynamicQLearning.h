@@ -37,13 +37,14 @@ private:
 	int m_BestGen = 1;
 	int m_MostFoodEaten = 0;
 	int m_BotsAlive = -1;
+	int m_CurrentBotsAlive = -1;
 	float m_BestTimeAlive = 0;
 
 	int m_Reached600 = 0;
 	int m_NotReached600 = 0;
 
-	const int m_NrOfBots = 50;
-	const int m_NrOfZombies = 10;
+	const int m_NrOfBots = 1;
+	const int m_NrOfZombies = 0;
 	const int m_NrOfFood;
 	bool m_AssignLastBotAlive = true;
 	bool m_SaveAtEnd;

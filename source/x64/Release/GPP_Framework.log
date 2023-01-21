@@ -1,0 +1,265 @@
+﻿  stdafx.cpp
+  EBehaviorTree.cpp
+  EFiniteStateMachine.cpp
+  EInfluenceMap.cpp
+  ENavGraph.cpp
+  App_AgarioGame_BT.cpp
+  App_AgarioGame.cpp
+  StatesAndTransitions.cpp
+  App_InfluenceMap.cpp
+  App_MachineLearning.cpp
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\MachineLearning\QBot.h(33,24): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\MachineLearning\QZombie.h(34,24): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\MachineLearning\App_MachineLearning.cpp(19,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  DynamicQLearning.cpp
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\MachineLearning\QBot.h(33,24): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\MachineLearning\QZombie.h(34,24): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+  Food.cpp
+  QBot.cpp
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\MachineLearning\QBot.h(33,24): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\MachineLearning\QZombie.h(34,24): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\MachineLearning\QBot.cpp(447,20): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  QLearning.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.32.31326\include\utility(247,16): warning C4244: 'initializing': conversion from '_Ty' to '_Ty1', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+          and
+          [
+              _Ty1=float
+          ]
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\MachineLearning\QLearning.cpp(186): message : see reference to function template instantiation 'std::pair<float,int>::pair<int,int,0>(std::pair<int,int> &&) noexcept' being compiled
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\MachineLearning\QLearning.cpp(186): message : see reference to function template instantiation 'std::pair<float,int>::pair<int,int,0>(std::pair<int,int> &&) noexcept' being compiled
+C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.32.31326\include\utility(247,55): warning C4267: 'initializing': conversion from 'size_t' to '_Ty2', possible loss of data
+          with
+          [
+              _Ty2=int
+          ]
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\MachineLearning\QLearning.cpp(192): message : see reference to function template instantiation 'std::pair<float,int>::pair<float,unsigned __int64,0>(std::pair<float,unsigned __int64> &&) noexcept' being compiled
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\MachineLearning\QLearning.cpp(192): message : see reference to function template instantiation 'std::pair<float,int>::pair<float,unsigned __int64,0>(std::pair<float,unsigned __int64> &&) noexcept' being compiled
+  App_NavMeshGraph.cpp
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\framework\EliteAI\EliteNavigation\Algorithms\EPathSmoothing.h(108,17): warning C4018: '<': signed/unsigned mismatch
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\framework\EliteAI\EliteNavigation\Algorithms\EPathSmoothing.h(147,17): warning C4018: '<': signed/unsigned mismatch
+  Cell.cpp
+  CellSpace.cpp
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\SteeringBehaviors\Flocking\TheFlock.h(41,34): warning C4267: 'return': conversion from 'size_t' to 'const int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\SteeringBehaviors\Flocking\CellSpace\CellSpace.cpp(59,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\SteeringBehaviors\Flocking\CellSpace\CellSpace.cpp(60,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\SteeringBehaviors\Flocking\CellSpace\CellSpace.cpp(62,10): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\SteeringBehaviors\Flocking\CellSpace\CellSpace.cpp(66,27): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\SteeringBehaviors\Flocking\CellSpace\CellSpace.cpp(71,27): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\SteeringBehaviors\Flocking\CellSpace\CellSpace.cpp(123,61): warning C4244: '+=': conversion from 'float' to 'size_t', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\SteeringBehaviors\Flocking\CellSpace\CellSpace.cpp(125,37): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\SteeringBehaviors\Flocking\CellSpace\CellSpace.cpp(129,61): warning C4244: '+=': conversion from 'float' to 'size_t', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\SteeringBehaviors\Flocking\CellSpace\CellSpace.cpp(133,42): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\SteeringBehaviors\Flocking\CellSpace\CellSpace.cpp(134,42): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\SteeringBehaviors\Flocking\CellSpace\CellSpace.cpp(138,19): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\SteeringBehaviors\Flocking\CellSpace\CellSpace.cpp(145,53): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\SteeringBehaviors\Flocking\CellSpace\CellSpace.cpp(146,53): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\SteeringBehaviors\Flocking\CellSpace\CellSpace.cpp(148,19): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\SteeringBehaviors\Flocking\CellSpace\CellSpace.cpp(153,61): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\SteeringBehaviors\Flocking\CellSpace\CellSpace.cpp(154,61): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+  EGraphConnectionTypes.cpp
+  EGraphNodeTypes.cpp
+  EGraphEditor.cpp
+  EGraphRenderer.cpp
+  Compiling...
+  EGeometry2DTypes.cpp
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\framework\EliteGeometry\EGeometry2DTypes.cpp(96,26): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\framework\EliteGeometry\EGeometry2DTypes.cpp(208,27): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\framework\EliteGeometry\EGeometry2DTypes.cpp(208,22): warning C4244: 'initializing': conversion from '__int64' to 'const int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\framework\EliteGeometry\EGeometry2DTypes.cpp(466,38): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\framework\EliteGeometry\EGeometry2DTypes.cpp(466,38): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\framework\EliteGeometry\EGeometry2DTypes.cpp(472,38): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\framework\EliteGeometry\EGeometry2DTypes.cpp(472,38): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\framework\EliteGeometry\EGeometry2DTypes.cpp(478,38): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\framework\EliteGeometry\EGeometry2DTypes.cpp(478,38): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+  EInputManager.cpp
+  EMatrix2x3.cpp
+  ERigidBodyBox2D.cpp
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\framework\ElitePhysics\Box2DIntegration\ERigidBodyBox2D.cpp(103,1): warning C4267: 'argument': conversion from 'size_t' to 'int32', possible loss of data
+  EPhysicsWorldBox2D.cpp
+  ECamera2D.cpp
+  SDLDebugRenderer2D.cpp
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\framework\EliteRendering\SDLIntegration\SDLDebugRenderer2D\SDLDebugRenderer2D.cpp(80,28): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\framework\EliteRendering\SDLIntegration\SDLDebugRenderer2D\SDLDebugRenderer2D.cpp(88,28): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\framework\EliteRendering\SDLIntegration\SDLDebugRenderer2D\SDLDebugRenderer2D.cpp(99,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  SDLFrame.cpp
+  ETimer_SDL.cpp
+  EImmediateUI.cpp
+  SDLWindow.cpp
+  gl3w.c
+  main.cpp
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\MachineLearning\QBot.h(33,24): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\MachineLearning\QZombie.h(34,24): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+  App_GraphTheory.cpp
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\framework\EliteAI\EliteGraphs\EIGraph.h(55,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\framework\EliteAI\EliteGraphs\EIGraph.h(55): message : while compiling class template member function 'int Elite::IGraph<T_NodeType,T_ConnectionType>::GetNrOfNodes(void) const'
+          with
+          [
+              T_NodeType=Elite::GraphNode2D,
+              T_ConnectionType=Elite::GraphConnection2D
+          ]
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\framework\EliteAI\EliteGraphs\EliteGraphAlgorithms\EEularianPath.h(150): message : see reference to function template instantiation 'int Elite::IGraph<T_NodeType,T_ConnectionType>::GetNrOfNodes(void) const' being compiled
+          with
+          [
+              T_NodeType=Elite::GraphNode2D,
+              T_ConnectionType=Elite::GraphConnection2D
+          ]
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\framework\EliteAI\EliteGraphs\EGraph2D.h(18): message : see reference to class template instantiation 'Elite::IGraph<T_NodeType,T_ConnectionType>' being compiled
+          with
+          [
+              T_NodeType=Elite::GraphNode2D,
+              T_ConnectionType=Elite::GraphConnection2D
+          ]
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\Pathfinding\GraphTheory\App_GraphTheory.cpp(13): message : see reference to class template instantiation 'Elite::Graph2D<Elite::GraphNode2D,Elite::GraphConnection2D>' being compiled
+  App_Sandbox.cpp
+  SandboxAgent.cpp
+  App_CombinedSteering.cpp
+  CombinedSteeringBehaviors.cpp
+  App_Flocking.cpp
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\SteeringBehaviors\Flocking\TheFlock.h(41,34): warning C4267: 'return': conversion from 'size_t' to 'const int', possible loss of data
+  FlockingSteeringBehaviors.cpp
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\SteeringBehaviors\Flocking\TheFlock.h(41,34): warning C4267: 'return': conversion from 'size_t' to 'const int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\SteeringBehaviors\Flocking\FlockingSteeringBehaviors.cpp(23,31): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\SteeringBehaviors\Flocking\FlockingSteeringBehaviors.cpp(82,31): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Compiling...
+  TheFlock.cpp
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\SteeringBehaviors\Flocking\TheFlock.h(41,34): warning C4267: 'return': conversion from 'size_t' to 'const int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\SteeringBehaviors\Flocking\TheFlock.cpp(139,21): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  App_SteeringBehaviors.cpp
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\SteeringBehaviors\Steering\App_SteeringBehaviors.cpp(79,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\SteeringBehaviors\Steering\App_SteeringBehaviors.cpp(231,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  Obstacle.cpp
+  SteeringAgent.cpp
+  SteeringBehaviors.cpp
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\SteeringBehaviors\Steering\SteeringBehaviors.cpp(104,76): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\Movement\SteeringBehaviors\Steering\SteeringBehaviors.cpp(108,76): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  App_PathfindingAStar.cpp
+  AgarioAgent.cpp
+  AgarioContactListener.cpp
+  AgarioFood.cpp
+  BaseAgent.cpp
+  NavigationColliderElement.cpp
+  QZombie.cpp
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\MachineLearning\QBot.h(33,24): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\MachineLearning\QZombie.h(34,24): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\projects\MachineLearning\QZombie.cpp(274,20): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+App_AgarioGame_BT.obj : error LNK2001: unresolved external symbol "void __cdecl ImGui::SetNextWindowPos(struct ImVec2 const &,int)" (?SetNextWindowPos@ImGui@@YAXAEBUImVec2@@H@Z)
+App_AgarioGame_BT.obj : error LNK2001: unresolved external symbol "void __cdecl ImGui::SetNextWindowSize(struct ImVec2 const &,int)" (?SetNextWindowSize@ImGui@@YAXAEBUImVec2@@H@Z)
+App_AgarioGame_BT.obj : error LNK2001: unresolved external symbol "bool __cdecl ImGui::Begin(char const *,bool *,int)" (?Begin@ImGui@@YA_NPEBDPEA_NH@Z)
+App_AgarioGame_BT.obj : error LNK2001: unresolved external symbol "void __cdecl ImGui::PushAllowKeyboardFocus(bool)" (?PushAllowKeyboardFocus@ImGui@@YAX_N@Z)
+App_AgarioGame_BT.obj : error LNK2001: unresolved external symbol "void __cdecl ImGui::SetWindowFocus(void)" (?SetWindowFocus@ImGui@@YAXXZ)
+App_AgarioGame_BT.obj : error LNK2001: unresolved external symbol "void __cdecl ImGui::PushItemWidth(float)" (?PushItemWidth@ImGui@@YAXM@Z)
+App_AgarioGame_BT.obj : error LNK2001: unresolved external symbol "void __cdecl ImGui::Text(char const *,...)" (?Text@ImGui@@YAXPEBDZZ)
+App_AgarioGame_BT.obj : error LNK2001: unresolved external symbol "void __cdecl ImGui::Indent(void)" (?Indent@ImGui@@YAXXZ)
+App_AgarioGame_BT.obj : error LNK2001: unresolved external symbol "void __cdecl ImGui::Unindent(void)" (?Unindent@ImGui@@YAXXZ)
+App_AgarioGame_BT.obj : error LNK2001: unresolved external symbol "void __cdecl ImGui::Spacing(void)" (?Spacing@ImGui@@YAXXZ)
+App_AgarioGame_BT.obj : error LNK2001: unresolved external symbol "void __cdecl ImGui::Separator(void)" (?Separator@ImGui@@YAXXZ)
+App_AgarioGame_BT.obj : error LNK2001: unresolved external symbol "struct ImGuiIO & __cdecl ImGui::GetIO(void)" (?GetIO@ImGui@@YAAEAUImGuiIO@@XZ)
+App_AgarioGame_BT.obj : error LNK2001: unresolved external symbol "void __cdecl ImGui::PopAllowKeyboardFocus(void)" (?PopAllowKeyboardFocus@ImGui@@YAXXZ)
+App_AgarioGame_BT.obj : error LNK2001: unresolved external symbol "void __cdecl ImGui::End(void)" (?End@ImGui@@YAXXZ)
+App_InfluenceMap.obj : error LNK2001: unresolved external symbol "bool __cdecl ImGui::Checkbox(char const *,bool *)" (?Checkbox@ImGui@@YA_NPEBDPEA_N@Z)
+App_InfluenceMap.obj : error LNK2001: unresolved external symbol "bool __cdecl ImGui::SliderFloat(char const *,float *,float,float,char const *,float)" (?SliderFloat@ImGui@@YA_NPEBDPEAMMM0M@Z)
+DynamicQLearning.obj : error LNK2001: unresolved external symbol "bool __cdecl ImGui::Button(char const *,struct ImVec2 const &)" (?Button@ImGui@@YA_NPEBDAEBUImVec2@@@Z)
+DynamicQLearning.obj : error LNK2001: unresolved external symbol "void __cdecl ImGui::SameLine(float,float)" (?SameLine@ImGui@@YAXMM@Z)
+EGraphEditor.obj : error LNK2001: unresolved external symbol "bool __cdecl ImGui::Combo(char const *,int *,char const *,int)" (?Combo@ImGui@@YA_NPEBDPEAH0H@Z)
+ERigidBodyBox2D.obj : error LNK2001: unresolved external symbol "public: class b2Body * __cdecl b2World::CreateBody(struct b2BodyDef const *)" (?CreateBody@b2World@@QEAAPEAVb2Body@@PEBUb2BodyDef@@@Z)
+ERigidBodyBox2D.obj : error LNK2001: unresolved external symbol "public: void __cdecl b2World::DestroyBody(class b2Body *)" (?DestroyBody@b2World@@QEAAXPEAVb2Body@@@Z)
+ERigidBodyBox2D.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl b2CircleShape::ComputeMass(struct b2MassData *,float)const " (?ComputeMass@b2CircleShape@@UEBAXPEAUb2MassData@@M@Z)
+ERigidBodyBox2D.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl b2CircleShape::ComputeAABB(struct b2AABB *,struct b2Transform const &,int)const " (?ComputeAABB@b2CircleShape@@UEBAXPEAUb2AABB@@AEBUb2Transform@@H@Z)
+ERigidBodyBox2D.obj : error LNK2001: unresolved external symbol "public: virtual bool __cdecl b2CircleShape::RayCast(struct b2RayCastOutput *,struct b2RayCastInput const &,struct b2Transform const &,int)const " (?RayCast@b2CircleShape@@UEBA_NPEAUb2RayCastOutput@@AEBUb2RayCastInput@@AEBUb2Transform@@H@Z)
+ERigidBodyBox2D.obj : error LNK2001: unresolved external symbol "public: virtual bool __cdecl b2CircleShape::TestPoint(struct b2Transform const &,struct b2Vec2 const &)const " (?TestPoint@b2CircleShape@@UEBA_NAEBUb2Transform@@AEBUb2Vec2@@@Z)
+ERigidBodyBox2D.obj : error LNK2001: unresolved external symbol "public: virtual int __cdecl b2CircleShape::GetChildCount(void)const " (?GetChildCount@b2CircleShape@@UEBAHXZ)
+ERigidBodyBox2D.obj : error LNK2001: unresolved external symbol "public: virtual class b2Shape * __cdecl b2CircleShape::Clone(class b2BlockAllocator *)const " (?Clone@b2CircleShape@@UEBAPEAVb2Shape@@PEAVb2BlockAllocator@@@Z)
+ERigidBodyBox2D.obj : error LNK2001: unresolved external symbol "public: class b2Fixture * __cdecl b2Body::CreateFixture(struct b2FixtureDef const *)" (?CreateFixture@b2Body@@QEAAPEAVb2Fixture@@PEBUb2FixtureDef@@@Z)
+ERigidBodyBox2D.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl b2PolygonShape::ComputeMass(struct b2MassData *,float)const " (?ComputeMass@b2PolygonShape@@UEBAXPEAUb2MassData@@M@Z)
+ERigidBodyBox2D.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl b2PolygonShape::ComputeAABB(struct b2AABB *,struct b2Transform const &,int)const " (?ComputeAABB@b2PolygonShape@@UEBAXPEAUb2AABB@@AEBUb2Transform@@H@Z)
+ERigidBodyBox2D.obj : error LNK2001: unresolved external symbol "public: virtual bool __cdecl b2PolygonShape::RayCast(struct b2RayCastOutput *,struct b2RayCastInput const &,struct b2Transform const &,int)const " (?RayCast@b2PolygonShape@@UEBA_NPEAUb2RayCastOutput@@AEBUb2RayCastInput@@AEBUb2Transform@@H@Z)
+ERigidBodyBox2D.obj : error LNK2001: unresolved external symbol "public: virtual bool __cdecl b2PolygonShape::TestPoint(struct b2Transform const &,struct b2Vec2 const &)const " (?TestPoint@b2PolygonShape@@UEBA_NAEBUb2Transform@@AEBUb2Vec2@@@Z)
+ERigidBodyBox2D.obj : error LNK2001: unresolved external symbol "public: virtual int __cdecl b2PolygonShape::GetChildCount(void)const " (?GetChildCount@b2PolygonShape@@UEBAHXZ)
+ERigidBodyBox2D.obj : error LNK2001: unresolved external symbol "public: virtual class b2Shape * __cdecl b2PolygonShape::Clone(class b2BlockAllocator *)const " (?Clone@b2PolygonShape@@UEBAPEAVb2Shape@@PEAVb2BlockAllocator@@@Z)
+ERigidBodyBox2D.obj : error LNK2001: unresolved external symbol "public: void __cdecl b2PolygonShape::SetAsBox(float,float,struct b2Vec2 const &,float)" (?SetAsBox@b2PolygonShape@@QEAAXMMAEBUb2Vec2@@M@Z)
+ERigidBodyBox2D.obj : error LNK2001: unresolved external symbol "public: void __cdecl b2PolygonShape::Set(struct b2Vec2 const *,int)" (?Set@b2PolygonShape@@QEAAXPEBUb2Vec2@@H@Z)
+ERigidBodyBox2D.obj : error LNK2001: unresolved external symbol "public: void __cdecl b2Body::DestroyFixture(class b2Fixture *)" (?DestroyFixture@b2Body@@QEAAXPEAVb2Fixture@@@Z)
+ERigidBodyBox2D.obj : error LNK2001: unresolved external symbol "public: void __cdecl b2Body::SetTransform(struct b2Vec2 const &,float)" (?SetTransform@b2Body@@QEAAXAEBUb2Vec2@@M@Z)
+ERigidBodyBox2D.obj : error LNK2001: unresolved external symbol "public: void __cdecl b2Body::SetMassData(struct b2MassData const *)" (?SetMassData@b2Body@@QEAAXPEBUb2MassData@@@Z)
+ERigidBodyBox2D.obj : error LNK2001: unresolved external symbol "struct b2Vec2 const b2Vec2_zero" (?b2Vec2_zero@@3Ub2Vec2@@B)
+EPhysicsWorldBox2D.obj : error LNK2001: unresolved external symbol "public: __cdecl b2World::b2World(struct b2Vec2 const &)" (??0b2World@@QEAA@AEBUb2Vec2@@@Z)
+EPhysicsWorldBox2D.obj : error LNK2001: unresolved external symbol "public: void __cdecl b2World::SetAllowSleeping(bool)" (?SetAllowSleeping@b2World@@QEAAX_N@Z)
+EPhysicsWorldBox2D.obj : error LNK2001: unresolved external symbol "public: void __cdecl b2Draw::SetFlags(unsigned int)" (?SetFlags@b2Draw@@QEAAXI@Z)
+EPhysicsWorldBox2D.obj : error LNK2001: unresolved external symbol "public: void __cdecl b2World::SetDebugDraw(class b2Draw *)" (?SetDebugDraw@b2World@@QEAAXPEAVb2Draw@@@Z)
+EPhysicsWorldBox2D.obj : error LNK2001: unresolved external symbol "public: void __cdecl b2World::Step(float,int,int)" (?Step@b2World@@QEAAXMHH@Z)
+EPhysicsWorldBox2D.obj : error LNK2001: unresolved external symbol "public: void __cdecl b2World::DrawDebugData(void)" (?DrawDebugData@b2World@@QEAAXXZ)
+EPhysicsWorldBox2D.obj : error LNK2001: unresolved external symbol "public: __cdecl b2World::~b2World(void)" (??1b2World@@QEAA@XZ)
+EPhysicsWorldBox2D.obj : error LNK2001: unresolved external symbol "public: __cdecl b2Draw::b2Draw(void)" (??0b2Draw@@QEAA@XZ)
+SDLDebugRenderer2D.obj : error LNK2001: unresolved external symbol "struct ImGuiStyle & __cdecl ImGui::GetStyle(void)" (?GetStyle@ImGui@@YAAEAUImGuiStyle@@XZ)
+SDLDebugRenderer2D.obj : error LNK2001: unresolved external symbol "void __cdecl ImGui::SetCursorPos(struct ImVec2 const &)" (?SetCursorPos@ImGui@@YAXAEBUImVec2@@@Z)
+SDLDebugRenderer2D.obj : error LNK2001: unresolved external symbol "void __cdecl ImGui::TextColoredV(struct ImVec4 const &,char const *,char *)" (?TextColoredV@ImGui@@YAXAEBUImVec4@@PEBDPEAD@Z)
+SDLFrame.obj : error LNK2001: unresolved external symbol SDL_GL_DeleteContext
+SDLFrame.obj : error LNK2001: unresolved external symbol SDL_GL_CreateContext
+SDLFrame.obj : error LNK2001: unresolved external symbol SDL_GL_SetSwapInterval
+SDLFrame.obj : error LNK2001: unresolved external symbol SDL_GetError
+SDLFrame.obj : error LNK2001: unresolved external symbol SDL_GL_SwapWindow
+ETimer_SDL.obj : error LNK2001: unresolved external symbol SDL_GetPerformanceFrequency
+ETimer_SDL.obj : error LNK2001: unresolved external symbol SDL_GetPerformanceCounter
+EImmediateUI.obj : error LNK2001: unresolved external symbol "void __cdecl ImGui::Shutdown(void)" (?Shutdown@ImGui@@YAXXZ)
+EImmediateUI.obj : error LNK2001: unresolved external symbol SDL_GetWindowWMInfo
+EImmediateUI.obj : error LNK2001: unresolved external symbol "public: void __cdecl ImFontAtlas::GetTexDataAsRGBA32(unsigned char * *,int *,int *,int *)" (?GetTexDataAsRGBA32@ImFontAtlas@@QEAAXPEAPEAEPEAH11@Z)
+EImmediateUI.obj : error LNK2001: unresolved external symbol "void __cdecl ImGui::Render(void)" (?Render@ImGui@@YAXXZ)
+EImmediateUI.obj : error LNK2001: unresolved external symbol SDL_PollEvent
+EImmediateUI.obj : error LNK2001: unresolved external symbol "public: void __cdecl ImGuiIO::AddInputCharactersUTF8(char const *)" (?AddInputCharactersUTF8@ImGuiIO@@QEAAXPEBD@Z)
+EImmediateUI.obj : error LNK2001: unresolved external symbol SDL_GetModState
+EImmediateUI.obj : error LNK2001: unresolved external symbol "public: void __cdecl ImDrawData::ScaleClipRects(struct ImVec2 const &)" (?ScaleClipRects@ImDrawData@@QEAAXAEBUImVec2@@@Z)
+EImmediateUI.obj : error LNK2001: unresolved external symbol SDL_GetWindowSize
+EImmediateUI.obj : error LNK2001: unresolved external symbol SDL_GL_GetDrawableSize
+EImmediateUI.obj : error LNK2001: unresolved external symbol SDL_GetMouseState
+EImmediateUI.obj : error LNK2001: unresolved external symbol SDL_GetWindowFlags
+EImmediateUI.obj : error LNK2001: unresolved external symbol SDL_ShowCursor
+EImmediateUI.obj : error LNK2001: unresolved external symbol "void __cdecl ImGui::NewFrame(void)" (?NewFrame@ImGui@@YAXXZ)
+EImmediateUI.obj : error LNK2001: unresolved external symbol SDL_SetClipboardText
+EImmediateUI.obj : error LNK2001: unresolved external symbol SDL_GetClipboardText
+SDLWindow.obj : error LNK2001: unresolved external symbol SDL_DestroyWindow
+SDLWindow.obj : error LNK2001: unresolved external symbol SDL_Init
+SDLWindow.obj : error LNK2001: unresolved external symbol SDL_GL_SetAttribute
+SDLWindow.obj : error LNK2001: unresolved external symbol SDL_GetCurrentDisplayMode
+SDLWindow.obj : error LNK2001: unresolved external symbol SDL_CreateWindow
+SDLWindow.obj : error LNK2001: unresolved external symbol SDL_PushEvent
+main.obj : error LNK2001: unresolved external symbol SDL_SetWindowPosition
+App_SteeringBehaviors.obj : error LNK2001: unresolved external symbol "void __cdecl ImGui::PushID(int)" (?PushID@ImGui@@YAXH@Z)
+App_SteeringBehaviors.obj : error LNK2001: unresolved external symbol "bool __cdecl ImGui::CollapsingHeader(char const *,char const *,bool,bool)" (?CollapsingHeader@ImGui@@YA_NPEBD0_N1@Z)
+App_SteeringBehaviors.obj : error LNK2001: unresolved external symbol "void __cdecl ImGui::AlignFirstTextHeightToWidgets(void)" (?AlignFirstTextHeightToWidgets@ImGui@@YAXXZ)
+App_SteeringBehaviors.obj : error LNK2001: unresolved external symbol "void __cdecl ImGui::PopItemWidth(void)" (?PopItemWidth@ImGui@@YAXXZ)
+App_SteeringBehaviors.obj : error LNK2001: unresolved external symbol "void __cdecl ImGui::PopID(void)" (?PopID@ImGui@@YAXXZ)
+App_SteeringBehaviors.obj : error LNK2001: unresolved external symbol "bool __cdecl ImGui::Combo(char const *,int *,bool (__cdecl*)(void *,int,char const * *),void *,int,int)" (?Combo@ImGui@@YA_NPEBDPEAHP6A_NPEAXHPEAPEBD@Z2HH@Z)
+AgarioContactListener.obj : error LNK2001: unresolved external symbol "public: void __cdecl b2World::SetContactListener(class b2ContactListener *)" (?SetContactListener@b2World@@QEAAXPEAVb2ContactListener@@@Z)
+C:\DAE\GradWork\RL Example\Reinforcement-Learning-Example\source\x64\Release\GPP_Framework.exe : fatal error LNK1120: 88 unresolved externals
